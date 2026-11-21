@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+  html, body { margin: 0; padding: 0; width: 1024px; height: 1024px; overflow: hidden; background: #eceef0; }
+</style>
+</head>
+<body>
+<svg width="1024" height="1024" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f7f8f9"/>
+      <stop offset="0.55" stop-color="#eceef0"/>
+      <stop offset="1" stop-color="#dde0e3"/>
+    </linearGradient>
+    <radialGradient id="bgGlow" cx="0.46" cy="0.38" r="0.75">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.85"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="cloudGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="0.55" stop-color="#f4f7fa"/>
+      <stop offset="0.88" stop-color="#dde5ec"/>
+      <stop offset="1" stop-color="#ccd6e0"/>
+    </linearGradient>
+    <linearGradient id="chromeGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#9fa6ad"/>
+      <stop offset="0.28" stop-color="#e9edf0"/>
+      <stop offset="0.52" stop-color="#fbfcfd"/>
+      <stop offset="0.78" stop-color="#b4bbc1"/>
+      <stop offset="1" stop-color="#878e95"/>
+    </linearGradient>
+    <linearGradient id="armGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#79828a"/>
+      <stop offset="0.35" stop-color="#c3c9cf"/>
+      <stop offset="0.55" stop-color="#eef1f3"/>
+      <stop offset="0.8" stop-color="#98a0a7"/>
+      <stop offset="1" stop-color="#6d747b"/>
+    </linearGradient>
+    <linearGradient id="chromeVert" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#8b9299"/>
+      <stop offset="0.3" stop-color="#dfe4e8"/>
+      <stop offset="0.55" stop-color="#f8f9fa"/>
+      <stop offset="0.8" stop-color="#a7aeb5"/>
+      <stop offset="1" stop-color="#7d838a"/>
+    </linearGradient>
+    <radialGradient id="dialFace" cx="0.38" cy="0.34" r="0.9">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#d7dde3"/>
+    </radialGradient>
+    <linearGradient id="terraGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#d07a52"/>
+      <stop offset="0.5" stop-color="#bc5f3a"/>
+      <stop offset="1" stop-color="#9c4a29"/>
+    </linearGradient>
+    <linearGradient id="terraRim" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#da8660"/>
+      <stop offset="1" stop-color="#b25935"/>
+    </linearGradient>
+    <linearGradient id="leafGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#5da24a"/>
+      <stop offset="1" stop-color="#2f6b26"/>
+    </linearGradient>
+    <linearGradient id="leafGrad2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#74b95e"/>
+      <stop offset="1" stop-color="#3a7d2f"/>
+    </linearGradient>
+    <radialGradient id="ledGlow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#54c2ff" stop-opacity="0.9"/>
+      <stop offset="1" stop-color="#54c2ff" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="softBlur" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="9"/>
+    </filter>
+    <filter id="softBlurSm" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="4"/>
+    </filter>
+    <g id="leaf">
+      <path d="M0 0 C 20 -30 22 -66 0 -100 C -22 -66 -20 -30 0 0 Z"/>
+      <path d="M0 -6 L0 -92" stroke="#256b1e" stroke-width="2.4" fill="none" opacity="0.55"/>
+    </g>
+  </defs>
+
+  <!-- seamless studio backdrop -->
+  <rect width="1024" height="1024" fill="url(#bgGrad)"/>
+  <rect width="1024" height="1024" fill="url(#bgGlow)"/>
+
+  <!-- floor shadows -->
+  <ellipse cx="468" cy="842" rx="150" ry="19" fill="#2c3136" opacity="0.20" filter="url(#softBlur)"/>
+  <ellipse cx="764" cy="838" rx="112" ry="15" fill="#2c3136" opacity="0.18" filter="url(#softBlur)"/>
+
+  <!-- lamp arm: weighted base + pole -->
+  <path d="M668 830 L856 830 L842 806 L682 806 Z" fill="url(#chromeGrad)"/>
+  <ellipse cx="762" cy="806" rx="80" ry="13" fill="#eef1f3"/>
+  <ellipse cx="762" cy="804" rx="80" ry="13" fill="url(#chromeGrad)" opacity="0.55"/>
+  <rect x="753" y="322" width="18" height="492" fill="url(#chromeVert)"/>
+  <!-- horizontal arm curving over to the cloud -->
+  <path d="M762 330 C 700 314 612 300 540 296" stroke="url(#armGrad)" stroke-width="17" fill="none" stroke-linecap="round"/>
+  <circle cx="762" cy="330" r="15" fill="url(#chromeGrad)" stroke="#878e95" stroke-width="1"/>
+  <circle cx="540" cy="296" r="11" fill="url(#chromeGrad)" stroke="#878e95" stroke-width="1"/>
+  <rect x="534" y="292" width="12" height="26" rx="5" fill="url(#chromeVert)"/>
+
+  <!-- ============ RAINCLOUD ONE device ============ -->
+  <!-- soft shadow the cloud casts downward -->
+  <ellipse cx="462" cy="492" rx="185" ry="14" fill="#9db4c6" opacity="0.25" filter="url(#softBlur)"/>
+  <!-- cloud body -->
+  <path id="cloudBody" fill="url(#cloudGrad)" stroke="#c3cedb" stroke-width="1.5" d="M312 462
+      C 282 462 256 438 259 408
+      C 240 382 256 342 292 336
+      C 297 300 332 274 368 285
+      C 388 254 434 243 465 264
+      C 495 238 546 249 561 280
+      C 600 274 631 305 626 341
+      C 656 356 661 397 640 422
+      C 651 446 629 462 602 462 Z"/>
+  <!-- top highlight for glossy moulded plastic -->
+  <ellipse cx="408" cy="308" rx="105" ry="34" fill="#ffffff" opacity="0.75" filter="url(#softBlur)"/>
+  <ellipse cx="540" cy="330" rx="52" ry="20" fill="#ffffff" opacity="0.45" filter="url(#softBlurSm)"/>
+  <!-- gentle bottom shading -->
+  <path d="M312 462 C 282 462 256 438 259 408 C 300 448 620 448 640 422 C 651 446 629 462 602 462 Z" fill="#b9c8d8" opacity="0.35"/>
+  <!-- flat underside band with brand -->
+  <rect x="330" y="450" width="252" height="34" rx="9" fill="#eef1f5" stroke="#c9d2dc" stroke-width="1.2"/>
+  <text x="456" y="474" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="20" letter-spacing="4.5" fill="#71808f">RAINCLOUD ONE</text>
+  <!-- chrome control dial on the side -->
+  <circle cx="606" cy="398" r="25" fill="url(#chromeGrad)" stroke="#878e95" stroke-width="1.2"/>
+  <circle cx="606" cy="398" r="17.5" fill="url(#dialFace)" stroke="#aeb6be" stroke-width="1"/>
+  <g stroke="#8b95a0" stroke-width="2" stroke-linecap="round">
+    <line x1="606" y1="384.5" x2="606" y2="388.5"/>
+    <line x1="594" y1="391" x2="596.8" y2="393.8"/>
+    <line x1="619" y1="391" x2="616.2" y2="393.8"/>
+  </g>
+  <line x1="606" y1="398" x2="615" y2="390" stroke="#3d4750" stroke-width="2.6" stroke-linecap="round"/>
+  <circle cx="606" cy="398" r="2.6" fill="#3d4750"/>
+  <!-- blue LED -->
+  <circle cx="352" cy="412" r="15" fill="url(#ledGlow)"/>
+  <circle cx="352" cy="412" r="5.5" fill="#2fb3ff" stroke="#bfe9ff" stroke-width="1.2"/>
+
+  <!-- rain: fine streaks falling on the plant only -->
+  <g stroke="#5ea9e6" stroke-linecap="round">
+    <line x1="356" y1="500" x2="356" y2="556" stroke-width="3" opacity="0.45"/>
+    <line x1="376" y1="506" x2="376" y2="586" stroke-width="3.4" opacity="0.65"/>
+    <line x1="394" y1="498" x2="394" y2="540" stroke-width="2.8" opacity="0.4"/>
+    <line x1="410" y1="508" x2="410" y2="596" stroke-width="3.4" opacity="0.7"/>
+    <line x1="428" y1="500" x2="428" y2="552" stroke-width="3" opacity="0.5"/>
+    <line x1="444" y1="510" x2="444" y2="600" stroke-width="3.6" opacity="0.75"/>
+    <line x1="462" y1="500" x2="462" y2="560" stroke-width="3" opacity="0.55"/>
+    <line x1="478" y1="508" x2="478" y2="592" stroke-width="3.4" opacity="0.7"/>
+    <line x1="496" y1="498" x2="496" y2="544" stroke-width="2.8" opacity="0.42"/>
+    <line x1="512" y1="506" x2="512" y2="588" stroke-width="3.4" opacity="0.66"/>
+    <line x1="530" y1="502" x2="530" y2="556" stroke-width="3" opacity="0.5"/>
+    <line x1="548" y1="508" x2="548" y2="584" stroke-width="3.2" opacity="0.6"/>
+    <line x1="566" y1="500" x2="566" y2="542" stroke-width="2.8" opacity="0.4"/>
+    <line x1="386" y1="540" x2="386" y2="580" stroke-width="2.6" opacity="0.35"/>
+    <line x1="452" y1="548" x2="452" y2="586" stroke-width="2.6" opacity="0.38"/>
+    <line x1="520" y1="546" x2="520" y2="580" stroke-width="2.6" opacity="0.35"/>
+  </g>
+
+  <!-- ============ the one accessory: potted plant ============ -->
+  <!-- stems -->
+  <g stroke="#2f6b26" stroke-width="5" fill="none" stroke-linecap="round">
+    <path d="M470 706 C 466 668 458 640 446 612"/>
+    <path d="M470 706 C 474 664 486 636 500 610"/>
+    <path d="M470 706 C 470 672 470 646 470 618"/>
+  </g>
+  <!-- leaves -->
+  <use href="#leaf" fill="url(#leafGrad)" transform="translate(446 614) rotate(-38) scale(1.05)"/>
+  <use href="#leaf" fill="url(#leafGrad2)" transform="translate(500 612) rotate(36) scale(1.0)"/>
+  <use href="#leaf" fill="url(#leafGrad)" transform="translate(470 620) rotate(2) scale(1.18)"/>
+  <use href="#leaf" fill="url(#leafGrad2)" transform="translate(452 640) rotate(-64) scale(0.8)"/>
+  <use href="#leaf" fill="url(#leafGrad)" transform="translate(492 642) rotate(60) scale(0.78)"/>
+  <use href="#leaf" fill="url(#leafGrad2)" transform="translate(470 652) rotate(-14) scale(0.66)"/>
+  <!-- glossy leaf highlights -->
+  <g fill="#ffffff" opacity="0.28">
+    <ellipse cx="452" cy="566" rx="7" ry="17" transform="rotate(-24 452 566)"/>
+    <ellipse cx="492" cy="572" rx="6" ry="15" transform="rotate(22 492 572)"/>
+    <ellipse cx="470" cy="556" rx="6" ry="16"/>
+  </g>
+  <!-- water droplets resting on leaves -->
+  <g>
+    <circle cx="438" cy="586" r="5" fill="#bfe0f7" opacity="0.9"/>
+    <circle cx="436.5" cy="584.5" r="1.7" fill="#ffffff"/>
+    <circle cx="505" cy="592" r="4.4" fill="#bfe0f7" opacity="0.9"/>
+    <circle cx="503.6" cy="590.6" r="1.5" fill="#ffffff"/>
+    <circle cx="474" cy="572" r="3.8" fill="#bfe0f7" opacity="0.9"/>
+    <circle cx="472.8" cy="570.8" r="1.3" fill="#ffffff"/>
+  </g>
+  <!-- terracotta pot -->
+  <path d="M400 724 L540 724 L523 826 Q521 840 507 840 L433 840 Q419 840 417 826 Z" fill="url(#terraGrad)"/>
+  <path d="M400 724 L446 724 L440 840 L433 840 Q419 840 417 826 Z" fill="#ffffff" opacity="0.10"/>
+  <path d="M498 724 L540 724 L523 826 Q521 840 507 840 L494 840 Z" fill="#5d2c15" opacity="0.16"/>
+  <rect x="388" y="690" width="164" height="36" rx="9" fill="url(#terraRim)"/>
+  <rect x="388" y="690" width="164" height="10" rx="5" fill="#ffffff" opacity="0.14"/>
+  <!-- soil -->
+  <ellipse cx="470" cy="694" rx="76" ry="11" fill="#4a3220"/>
+  <ellipse cx="470" cy="692" rx="76" ry="10" fill="#5a4030"/>
+  <g fill="#33241a">
+    <circle cx="436" cy="692" r="3"/><circle cx="492" cy="695" r="2.6"/>
+    <circle cx="462" cy="689" r="2.2"/><circle cx="512" cy="691" r="2.4"/>
+    <circle cx="420" cy="694" r="2.2"/>
+  </g>
+</svg>
+</body>
+</html>
